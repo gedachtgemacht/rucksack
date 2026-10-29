@@ -4,6 +4,8 @@
 
 ![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue) ![PWA](https://img.shields.io/badge/PWA-installable-5a0fc8) ![Offline](https://img.shields.io/badge/offline-yes-2ea44f) ![No dependencies](https://img.shields.io/badge/dependencies-none-lightgrey)
 
+**Try it:** https://gedachtgemacht.github.io/rucksack/ (works in any phone browser, install via "Add to Home Screen")
+
 The app interface is in German.
 
 If you hike, go bikepacking or try to travel light, you plan your gear as a list with weights. The usual options are web services that need an account, or apps that cost money. Your list then sits on someone else's server, and out on the trail without signal you can't reach it. rucksack. does the core of that job as an installable web app: items with weights, categories, the split into base, worn and consumable weight, lists you can reuse, and backups as a file.
