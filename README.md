@@ -1,93 +1,99 @@
 # rucksack.
 
-**Wie schwer ist dein Rucksack wirklich?** rucksack. rechnet dir Basisgewicht, getragenes Gewicht und Verbrauch deiner Packliste aus, offline und ohne Konto.
+**How heavy is your pack, really?** rucksack. is a packing list with gear weights for hiking, bikepacking and light travel. It works out base weight, worn weight and consumables for you, offline and without an account. It runs as an installable web app (PWA), and your lists never leave your phone.
 
-Wer wandert, mit dem Rad auf Tour geht oder leicht reisen will, plant die Ausrüstung als Liste mit Gewichten. Dafür gibt es Webdienste mit Konto oder Apps, die Geld kosten. Die Liste liegt dann auf fremden Servern, und im Gelände ohne Netz kommst du nicht dran. rucksack. macht den Kern davon als installierbare Web-App: Gegenstände mit Gewicht, Kategorien, die Trennung in Basis, getragen und Verbrauch, Listen zum Wiederverwenden und Sichern als Datei.
+![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue) ![PWA](https://img.shields.io/badge/PWA-installable-5a0fc8) ![Offline](https://img.shields.io/badge/offline-yes-2ea44f) ![No dependencies](https://img.shields.io/badge/dependencies-none-lightgrey)
 
-Reine Rechnung, keine KI, kein Server. Alles bleibt auf deinem Handy.
+The app interface is in German.
+
+If you hike, go bikepacking or try to travel light, you plan your gear as a list with weights. The usual options are web services that need an account, or apps that cost money. Your list then sits on someone else's server, and out on the trail without signal you can't reach it. rucksack. does the core of that job as an installable web app: items with weights, categories, the split into base, worn and consumable weight, lists you can reuse, and backups as a file.
+
+Plain arithmetic, no AI, no server. Everything stays on your phone.
 
 <p align="center">
-  <img src="bilder/1-uebersicht.png" width="240" alt="">
+  <img src="bilder/1-uebersicht.png" width="240" alt="Phone view of an example packing list with categories, item weights and base weight in the header">
 </p>
 <p align="center">
-  <img src="bilder/2-breit.png" width="640" alt="">
+  <img src="bilder/2-breit.png" width="640" alt="Wide two-column view with the packing list on the left and the weight summary with per-category bars on the right">
 </p>
 
-## Warum
+## Why
 
-Bezahlte Packlisten-Apps stellen Abhaken in den Vordergrund, Gewichte sind Nebensache. Die bekannten Gewichtslisten der Leichtgewicht-Szene laufen als Webdienst mit Konto und sind offline nicht nutzbar. rucksack. ist das Gegenstück ohne Konto und ohne Server, mit Export und Import als Datei.
+Paid packing list apps focus on ticking items off, and weights are an afterthought. The well-known gear weight lists of the ultralight scene run as web services with an account and don't work offline. rucksack. is the counterpart without an account and without a server, with export and import as a file.
 
-## Funktionen
+## Features
 
-- **Mehrere Listen**: anlegen, umbenennen, löschen (mit Rückfrage) und duplizieren, zum Beispiel für die nächste Tour
-- **Kategorien** pro Liste, frei benennbar, mit Hoch- und Runter-Knopf sortierbar
-- **Einträge** mit Name, Gewicht, Anzahl, Art (`basis`, `getragen`, `verbrauch`) und Notiz. Gewicht in g, kg, oz oder lb, gespeichert wird immer in ganzen Gramm
-- **Summen live**: gesamt, getragen, Verbrauch, Rucksackgewicht und Basisgewicht, je Kategorie mit Anteil in Prozent und Balken
-- **Anzeigeeinheit** wählbar: g, kg, oz, lb
-- **Packmodus**: nur Haken und Namen, dazu ein Knopf, der alle Haken zurücksetzt
-- **Export** aller Listen oder der aktuellen Liste als JSON-Datei, Import von JSON
-- **Import von LighterPack-CSV** als neue Liste, für den Umzug
-- **Beispielliste**, als `beispiel` markiert und mit einem Klick entfernbar
-- Hell und dunkel, funktioniert offline, installierbar als App
+- **Multiple lists**: create, rename, delete (with confirmation) and duplicate, for example for your next trip
+- **Categories** per list, named freely, sorted with up and down buttons
+- **Items** with name, weight, quantity, type (`basis` base, `getragen` worn, `verbrauch` consumable) and a note. Weight in g, kg, oz or lb, always stored as whole grams
+- **Live totals**: total, worn, consumables, pack weight and base weight, plus each category with its share in percent and a bar
+- **Display unit** of your choice: g, kg, oz, lb
+- **Packing mode**: only checkboxes and names, plus a button that clears all checks
+- **Export** of all lists or the current list as a JSON file, import from JSON
+- **Import of LighterPack CSV** as a new list, for moving over
+- **Example list**, marked as `beispiel` ("example") and removable with one click
+- Light and dark theme, works offline, installable as an app
 
-Bewusst nicht dabei: Konto, Sync, Teilen per Link, Ausrüstungsdatenbank mit Herstellergewichten, Preise, Vorschläge nach Ziel oder Wetter, Bilder zu Einträgen, CSV-Export im LighterPack-Format. Die Art gilt für den ganzen Eintrag. Wer ein Stück trägt und den Rest im Rucksack hat, legt zwei Einträge an.
+Deliberately left out: accounts, sync, sharing by link, a gear database with manufacturer weights, prices, suggestions based on destination or weather, photos for items, CSV export in LighterPack format. The type applies to the whole item. If you wear one piece and carry the rest in the pack, create two items.
 
-## Datenschutz
+## Privacy
 
-Nichts verlässt dein Gerät. rucksack. hat keinen Server, kein Konto, keine Analyse, keine Werbung und lädt nichts aus dem Netz nach. Schriften und Icons liegen in der App selbst. Deine Listen liegen im `localStorage` deines Browsers. Exporte entstehen nur, wenn du sie selbst auslöst.
+Nothing leaves your device. rucksack. has no server, no account, no analytics, no ads, and loads nothing from the network. Fonts and icons are bundled with the app. Your lists live in your browser's `localStorage`. Exports only happen when you trigger them yourself.
 
-Weil die Daten nur im Browser liegen: Wer die Websitedaten löscht, löscht auch die Listen. Manche Browser räumen Daten bei langer Nichtnutzung von selbst auf. Mach deshalb ab und zu eine Sicherung, die App zeigt dir das Datum des letzten Exports.
+Because the data lives only in the browser: if you clear the site data, you also delete your lists. Some browsers clean up data on their own after a long time without use. So make a backup now and then. The app shows you the date of your last export.
 
-## Installation
+## Install
 
-rucksack. ist eine statische Web-App. Es gibt keinen Build-Schritt und keine Abhängigkeiten.
+rucksack. is a static web app. There is no build step and there are no dependencies.
 
-1. Den Ordner `rucksack/` auf einen beliebigen statischen Host legen (eigener Webspace, GitHub Pages, Netlify, ein Raspberry Pi). Für die Installation als App ist HTTPS nötig.
-2. Die Adresse im Handybrowser öffnen.
-3. Im Browsermenü **Zum Startbildschirm hinzufügen** wählen. Danach startet rucksack. wie eine App und funktioniert auch ohne Netz.
+1. Put the `rucksack/` folder on any static host (your own web space, GitHub Pages, Netlify, a Raspberry Pi). Installing it as an app requires HTTPS.
+2. Open the address in your phone's browser.
+3. In the browser menu choose **Add to Home Screen**. After that rucksack. starts like an app and also works without a connection.
 
-Lokal testen:
+Test locally:
 
 ```
 cd rucksack
 python3 -m http.server 8000
 ```
 
-Dann `http://localhost:8000` im Browser öffnen.
+Then open `http://localhost:8000` in your browser.
 
-## Wie gerechnet wird
+## How the math works
 
-Die Rechenfunktionen stehen als reine Funktionen in `rechnen.js`, ohne DOM.
+The calculations are pure functions in `rechnen.js`, without DOM.
 
-**Zeile.** Gewicht × Anzahl. Anzahl 0 heißt: steht auf der Liste, kommt diesmal nicht mit und zählt nicht.
+**Line.** Weight × quantity. Quantity 0 means: it's on the list, it doesn't come along this time, and it doesn't count.
 
-**Summen.**
-- gesamt = Summe aller Zeilen
-- getragen = Summe der Zeilen mit Art `getragen`
-- verbrauch = Summe der Zeilen mit Art `verbrauch`
-- rucksackgewicht = gesamt minus getragen (was auf dem Rücken liegt, inklusive Verbrauch)
-- basisgewicht = gesamt minus getragen minus verbrauch
+**Totals.**
+- total = sum of all lines
+- worn = sum of lines with type `getragen`
+- consumables = sum of lines with type `verbrauch`
+- pack weight = total minus worn (what is on your back, consumables included)
+- base weight = total minus worn minus consumables
 
-**Kategorien.** Summe je Kategorie, Anteil = Summe ÷ gesamt × 100, auf ganze Prozent gerundet. Bei gesamt = 0 ist der Anteil 0. Die gerundeten Anteile müssen nicht genau 100 ergeben, das wird nicht kaschiert.
+**Categories.** Sum per category, share = sum ÷ total × 100, rounded to whole percent. If total = 0, the share is 0. The rounded shares don't have to add up to exactly 100, and the app doesn't hide that.
 
-**Einheiten.** 1 oz = 28,349523125 g, 1 lb = 453,59237 g. Eingaben werden kaufmännisch auf ganze Gramm gerundet. Anzeige: g ganzzahlig, kg mit zwei, oz mit einer, lb mit zwei Nachkommastellen, mit Dezimalkomma.
+**Units.** 1 oz = 28.349523125 g, 1 lb = 453.59237 g. Input is rounded half up to whole grams. Display: g as whole numbers, kg with two, oz with one, lb with two decimal places, using a decimal comma.
 
-**Beispiel.** Zelt 1200 g, Schlafsack 800 g (beide `basis`), Wasser 2 × 1000 g und Essen 3 × 500 g (beide `verbrauch`), Schuhe 900 g und Jacke 350 g (beide `getragen`), Stuhl 450 g mit Anzahl 0:
+**Example.** Tent 1200 g, sleeping bag 800 g (both `basis`), water 2 × 1000 g and food 3 × 500 g (both `verbrauch`), shoes 900 g and jacket 350 g (both `getragen`), chair 450 g with quantity 0:
 
-- gesamt 6750 g, getragen 1250 g, Verbrauch 3500 g
-- Rucksackgewicht 5500 g, Basisgewicht 2000 g
-- Schlafen 30 %, Proviant 52 %, Kleidung 19 %, Lager 0 % (zusammen 101 %, das ist so richtig)
+- total 6750 g, worn 1250 g, consumables 3500 g
+- pack weight 5500 g, base weight 2000 g
+- Sleeping 30 %, Food 52 %, Clothing 19 %, Camp 0 % (101 % together, and that is correct)
 
-**LighterPack-CSV.** Die Spalten werden über die Kopfzeile zugeordnet, nicht über die Position. Einheiten `g`, `kg`, `oz`, `lb`. Ist `worn` oder `consumable` gesetzt, wird die Art `getragen` bzw. `verbrauch`, bei beidem gewinnt `verbrauch`. `url` und `price` werden ignoriert, `desc` wird zur Notiz. Das Format ist nicht offiziell dokumentiert und kann abweichen, bei Fehlern meldet die App das.
+**LighterPack CSV.** Columns are matched by the header row, not by position. Units `g`, `kg`, `oz`, `lb`. If `worn` or `consumable` is set, the type becomes `getragen` or `verbrauch`; if both are set, `verbrauch` wins. `url` and `price` are ignored, `desc` becomes the note. The format is not officially documented and may differ; the app reports errors if it does.
 
-**Grenzen.** rucksack. rechnet nur mit den Gewichten, die du eingibst. Herstellerangaben sind oft geschönt, wiege im Zweifel selbst nach.
+**Limits.** rucksack. only calculates with the weights you enter. Manufacturer figures are often optimistic, so weigh your gear yourself when in doubt.
 
-Die Tests laufen ohne Abhängigkeiten mit `node --test` oder `node test-calc.js` und prüfen die Handrechnungen und Testvektoren.
+The tests run without dependencies via `node --test` or `node test-calc.js` and check the hand calculations and test vectors.
 
-## Lizenz
+## License
 
-GNU Affero General Public License v3.0 (AGPL-3.0), siehe `LICENSE`.
+GNU Affero General Public License v3.0 (AGPL-3.0), see `LICENSE`.
+
+**Deutsch:** rucksack. ist eine Packliste mit Gewichten für Wandern, Trekking und Bikepacking, die Basisgewicht, getragenes Gewicht und Verbrauch ausrechnet, offline als PWA und ohne Konto.
 
 ---
 
-**gedacht.gemacht.** Kleine, ehrliche Software. Alles bleibt auf deinem Gerät.
+**gedacht.gemacht.** Small, honest software. Everything stays on your device. · [More projects](https://github.com/gedachtgemacht)
